@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from "react";
+import Nav from "./Component/Nav";
 import Calendar from "./Component/Calendar";
 
 function App() {
@@ -9,10 +10,23 @@ function App() {
 
   return (
     <div className="App">
+      <Nav
+        year={year}
+        month={month}
+        date={date}
+        changeMonth={(year, month) => {
+          setYear(year);
+          setMonth(month);
+          setDate(1);
+        }}
+      ></Nav>
       <Calendar
         year={year}
         month={month}
         date={date}
+        changeDate={(date) => {
+          setDate(date);
+        }}
       ></Calendar>
     </div>
   );

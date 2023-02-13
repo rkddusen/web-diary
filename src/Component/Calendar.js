@@ -12,6 +12,9 @@ function Calendar(props) {
           year={props.year}
           month={props.month}
           date={props.date}
+          changeDate={function (date) {
+            props.changeDate(date);
+          }}
         ></CalendarDate>
       </table>
     </div>

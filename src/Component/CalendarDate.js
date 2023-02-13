@@ -28,6 +28,9 @@ function CalendarDate(props) {
         <td
           key={"date" + (i + 1)}
           className={"date date-" + (i + 1) + " date-today"}
+          onClick={function () {
+            props.changeDate(i + 1);
+          }}
         >
           {i + 1}
           <br />
@@ -40,6 +43,9 @@ function CalendarDate(props) {
         <td
           key={"date" + (i + 1)}
           className={"date date-" + (i + 1) + " date-check"}
+          onClick={function () {
+            props.changeDate(i + 1);
+          }}
         >
           {i + 1}
           <br />
@@ -52,6 +58,9 @@ function CalendarDate(props) {
         <td
           key={"date" + (i + 1)}
           className={"date date-" + (i + 1)}
+          onClick={function () {
+            props.changeDate(i + 1);
+          }}
         >
           {i + 1}
           <br />
